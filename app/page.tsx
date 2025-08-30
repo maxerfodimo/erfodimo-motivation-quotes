@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Page() {
   const [data, setData] = useState([]);
@@ -48,7 +48,7 @@ export default function Page() {
     fetchData(selectedSource);
   }, [selectedSource]);
 
-  const handleSourceChange = (event: any) => {
+  const handleSourceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedSource(event.target.value);
   };
 
